@@ -88,5 +88,5 @@
     {"text": "How do I place an order?", "intention": "purchase"},
     {"text": "Can you help me buy?", "intention": "purchase"},
     {"text": "How do I purchase?", "intention": "purchase"},
-    {"text": "Interested in ordering", "intention": "purchase"},
+    {"text": "Interested in ordering", "intention": "purchase"}
 ]
