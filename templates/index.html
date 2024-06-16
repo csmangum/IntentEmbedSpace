@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCA of Phrase Embeddings</title>
+</head>
+<body>
+    <h1>PCA of Phrase Embeddings</h1>
+    <form method="post">
+        <label for="sentence">Enter a sentence:</label>
+        <input type="text" id="sentence" name="sentence" required>
+        
+        <label for="method">Select Intent Function:</label>
+        <select id="method" name="method">
+            <option value="nearest_neighbors" {% if selected_method == "nearest_neighbors" %}selected{% endif %}>Nearest Neighbors</option>
+            <option value="fuzzy_search" {% if selected_method == "fuzzy_search" %}selected{% endif %}>Fuzzy Search</option>
+        </select>
+
+        <label for="dimensions">Select Chart Dimensions:</label>
+        <select id="dimensions" name="dimensions">
+            <option value="2d" {% if selected_dimensions == "2d" %}selected{% endif %}>2D</option>
+            <option value="3d" {% if selected_dimensions == "3d" %}selected{% endif %}>3D</option>
+        </select>
+        
+        <button type="submit">Submit</button>
+    </form>
+    <p>Input Sentence: {{ sample_input }}</p>
+    <p>Majority Neighbor Intent: {{ majority_intent }}</p>
+    <div>{{ graph_html | safe }}</div>
+</body>
+</html>
