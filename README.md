@@ -1,8 +1,8 @@
 # IntentEmbedSpace
 
-Proof-of-concept for Intent Embedding Space.
+Proof-of-concept of an intention embedding space to classify an incoming message with an intention without training a model.
 
-Taking a simple mapping of phrases with matching intents, we can visualize the semantic space of intents using the embedding layer of a pre-trained language model.
+Uses the embedding layer of a pre-trained lightweight transformer to encode sentence context into vector space where new messages are encoded then use k-nearest neighbors to infer intent from a pre-calculated intention space.
 
 ![Intent Embedding Space](docs/pca_clusters.png)
 
